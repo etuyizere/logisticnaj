@@ -31,8 +31,8 @@ SECRET_KEY = 'django-insecure-=6bib%s4id1e5q9)!fi(2dtwg+&5v*xr=t&oo@9=di1*c&-b9y
 #SECRETY_KEY = env('SECRETY_KEY')
 DEBUG = True
 
-#ALLOWED_HOSTS = ['najapp.herokuapp.com','127.0.0.1']
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['najapp.herokuapp.com','127.0.0.1']
+#ALLOWED_HOSTS = ['127.0.0.1']
 
 
 
