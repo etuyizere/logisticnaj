@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -32,9 +33,6 @@ SECRET_KEY = 'django-insecure-=6bib%s4id1e5q9)!fi(2dtwg+&5v*xr=t&oo@9=di1*c&-b9y
 DEBUG = True
 
 ALLOWED_HOSTS = ['najapp.herokuapp.com','127.0.0.1']
-#ALLOWED_HOSTS = ['127.0.0.1']
-
-
 
 # Application definition
 
@@ -135,7 +133,7 @@ STATICFILES_DIR = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #
-STATIC_URL = '/static/'
+django_heroku.settings(locals())
 
 # Optional: To manage static files with WhiteNoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
